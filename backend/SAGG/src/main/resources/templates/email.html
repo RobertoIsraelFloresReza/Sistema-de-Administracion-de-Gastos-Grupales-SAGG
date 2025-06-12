@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 500px;
+            margin: auto;
+            text-align: left;
+            border-top: 6px solid #0e5a8c;
+            border-bottom: 6px solid #f59324;
+        }
+        h1 {
+            color: #0e5a8c;
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            color: #444;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .token {
+            background: #f59324;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            margin: 20px 0;
+            letter-spacing: 1px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #0e5a8c;
+            color: #ffffff;
+            padding: 14px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #f59324;
+        }
+        .footer {
+            font-size: 14px;
+            color: #777;
+            margin-top: 30px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Solicitud de Restablecimiento de Contraseña</h1>
+    <p>Estimado usuario,</p>
+    <p>Hemos recibido una solicitud para restablecer tu contraseña. Por favor, utiliza el siguiente código para completar el proceso:</p>
+    <p class="token" th:text="${token}">[Código de restablecimiento]</p>
+    <p>Si no has solicitado este cambio, puedes ignorar este mensaje de manera segura.</p>
+    <a href="http://localhost:5173/reset-password" class="btn">Restablecer Contraseña</a>
+    <p class="footer">Este es un mensaje automático, por favor no respondas a este correo.</p>
+</div>
+</body>
+</html>
