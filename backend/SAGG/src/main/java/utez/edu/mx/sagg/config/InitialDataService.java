@@ -34,7 +34,7 @@ public class InitialDataService {
     }
 
     private void createUserWithRole(String name, String lastName, String email, String password, Role role) {
-        Persons person = getOrSavePersons(new Persons(name, lastName, email, "7773438771", true));
+        Persons person = getOrSavePersons(new Persons(name, lastName, email, "7773438000", true));
         Users user = getOrSaveUsers(new Users(email, encoder.encode(password), true, person));
         user.setRole(role);
         usersRepository.save(user);
