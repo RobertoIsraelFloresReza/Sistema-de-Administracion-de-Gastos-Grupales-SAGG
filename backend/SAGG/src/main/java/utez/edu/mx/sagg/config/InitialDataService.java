@@ -28,7 +28,7 @@ public class InitialDataService {
         Role clientRole = getOrSaveRole(new Role("USUARIO_REGULAR"));
 
         createUserWithRole("Nelida", "Baron Perez", "nelidabaron@utez.edu.mx", "admingeneral", adminRole);
-        createUserWithRole("Andrea", "Aquino Flores", "20233tn183@utez.edu.mx", "admingrupal", workerRole);
+        createUserWithRole("Janeth", "Hernandez Victoriano", "20223TN061@utez.edu.mx", "admingrupal", workerRole);
         createUserWithRole("Israel", "Flores Reza", "20223TN016@utez.edu.mx", "usuarioregular", clientRole);
     }
 

@@ -2,86 +2,46 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restablecer Contraseña</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 500px;
-            margin: auto;
-            text-align: left;
-            border-top: 6px solid #0e5a8c;
-            border-bottom: 6px solid #f59324;
-        }
-        h1 {
-            color: #0e5a8c;
-            font-size: 22px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        p {
-            color: #444;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        .token {
-            background: #f59324;
-            padding: 15px;
-            border-radius: 5px;
-            font-size: 20px;
-            font-weight: bold;
-            display: block;
-            color: #ffffff;
-            text-align: center;
-            margin: 20px 0;
-            letter-spacing: 1px;
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background: #0e5a8c;
-            color: #ffffff;
-            padding: 14px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #f59324;
-        }
-        .footer {
-            font-size: 14px;
-            color: #777;
-            margin-top: 30px;
-            text-align: center;
-            border-top: 1px solid #ddd;
-            padding-top: 15px;
-        }
-    </style>
+    <title>Restablecer Contraseña | SAGG</title>
 </head>
-<body>
-<div class="container">
-    <h1>Solicitud de Restablecimiento de Contraseña</h1>
-    <p>Estimado usuario,</p>
-    <p>Hemos recibido una solicitud para restablecer tu contraseña. Por favor, utiliza el siguiente código para completar el proceso:</p>
-    <p class="token" th:text="${token}">[Código de restablecimiento]</p>
-    <p>Si no has solicitado este cambio, puedes ignorar este mensaje de manera segura.</p>
-    <a href="http://localhost:5173/reset-password" class="btn">Restablecer Contraseña</a>
-    <p class="footer">Este es un mensaje automático, por favor no respondas a este correo.</p>
+<body style="font-family: Arial, sans-serif; background-color: #f8fafc; padding: 40px 20px; color: #2d3748; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+
+<div style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; overflow: hidden;">
+
+    <div style="background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%); padding: 24px; text-align: center; color: #ffffff;">
+        <h1 style="margin: 0; font-size: 22px;">Restablecimiento de Contraseña</h1>
+    </div>
+
+    <div style="padding: 32px;">
+        <p>Estimado usuario,</p>
+        <p>Hemos recibido una solicitud para restablecer la contraseña asociada a tu cuenta. Por favor, utiliza el siguiente código de verificación para completar el proceso:</p>
+
+        <p style="background-color: #f3e8ff; color: #7c3aed; padding: 16px; border-radius: 8px; font-size: 24px; font-weight: bold; text-align: center; letter-spacing: 2px; margin: 24px 0; border: 1px dashed #7c3aed;"
+           th:text="${token}">[Código de restablecimiento]</p>
+
+
+        <p style="color: #4a5568; font-size: 14px; text-align: center; font-style: italic; margin-top: -16px;">
+            Este código es válido por 30 minutos.
+        </p>
+
+        <div style="height: 1px; background-color: #e2e8f0; margin: 24px 0;"></div>
+
+        <div style="text-align: center; margin: 32px 0;">
+            <a href="http://localhost:5173/reset-password" style="display: inline-block; background-color: #7c3aed; color: #ffffff; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 15px;">
+                Restablecer Contraseña
+            </a>
+        </div>
+
+        <div style="background-color: #f8fafc; padding: 12px 16px; border-radius: 8px; font-size: 14px; color: #4a5568; border: 1px solid #e2e8f0; margin-top: 24px;">
+            ⚠️ Por tu seguridad, nunca compartas este código con nadie.
+        </div>
+    </div>
+
+    <div style="font-size: 13px; color: #718096; text-align: center; padding: 24px; border-top: 1px solid #e2e8f0;">
+        <p>Este es un mensaje automático, por favor no respondas a este correo.</p>
+        <p>&copy; 2025 SAGG. Todos los derechos reservados.</p>
+    </div>
+
 </div>
 </body>
 </html>
